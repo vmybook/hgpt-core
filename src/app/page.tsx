@@ -4,7 +4,7 @@ import { NetsList } from '@/features/nets-list/pub/nets-list';
 export default function Home() {
     return (
         <main className="flex min-h-screen flex-col p-8">
-            <h1>Nets</h1>
+            <h1>Nets Title</h1>
             <CreateNetForm revalidatePagePath="/" className="max-w-[300px] mb-10" />
             <NetsList revalidatePagePath="/" />
         </main>
