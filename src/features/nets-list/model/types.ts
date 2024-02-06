@@ -5,7 +5,7 @@ type NetListElement = {
 };
 
 type CreateNetListElementCommand = {
-    name: string;
+    title: string;
     description: string;
 };
 
