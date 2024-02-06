@@ -48,7 +48,7 @@ export function CreateNetForm({
                         createNetAction(data, revalidatePagePath);
                     });
                 })}
-                className={cn(className, "space-y-8")}
+                className={cn(className, "space-y-4")}
             >
                 <FormField
                     control={form.control}
@@ -82,7 +82,7 @@ export function CreateNetForm({
                         </FormItem>
                     )}
                 />
-                <Button type="submit" disabled={isCreateTransition}>
+                <Button className="mt-8" type="submit" disabled={isCreateTransition}>
                     Save
                 </Button>
             </form>
