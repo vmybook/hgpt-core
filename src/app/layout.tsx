@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/shared/lib/utils';
+import { AppHeader } from '@/widgets/app-header/app-header';
+import { ThemeProvider } from '@/features/theme/theme-provider';
 
 const fontSans = FontSans({
     subsets: ['latin'],
@@ -26,7 +28,10 @@ export default function RootLayout({
                     fontSans.variable,
                 )}
             >
-                {children}
+                <ThemeProvider>
+                    <AppHeader />
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     );
