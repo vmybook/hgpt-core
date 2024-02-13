@@ -22,7 +22,7 @@ export default function AuthorizedGuard({
     }, [isUnauthenticated]);
 
     const isLoading =
-        session.status === 'loading' || session.status === 'authenticated';
+        session.status === 'loading' || session.status === 'unauthenticated';
 
     return (
         <>
