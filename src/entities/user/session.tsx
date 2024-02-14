@@ -7,9 +7,6 @@ export const useAppSession = useSession;
 
 export const useRole = () => {
     const session = useAppSession();
-    if (session.status === 'authenticated') {
-    }
-
     return session?.data?.user?.role;
 };
 

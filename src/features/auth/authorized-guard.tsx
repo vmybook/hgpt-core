@@ -1,6 +1,6 @@
 'use client';
 
-import { useAppSession } from '@/entities/user/session.client';
+import { useAppSession } from '@/entities/user/_vm/use-app-session';
 import { FullPageSpinner } from '@/shared/components/ui/full-page-spinner';
 
 import { signIn } from 'next-auth/react';
