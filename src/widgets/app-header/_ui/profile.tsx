@@ -21,7 +21,7 @@ import { ProfileAvatar, getProfileDisplayName } from '@/entities/user/profile';
 export function Profile() {
     const session = useAppSession();
     const { signOut, isPending: isLoadingSignOut } = useSignOut();
-    
+
     if (session.status === 'loading') {
         return <Skeleton className="w-8 h-8 rounded-full" />;
     }
@@ -39,7 +39,7 @@ export function Profile() {
                     variant="ghost"
                     className="p-px rounded-full self-center h-8 w-8"
                 >
-                    <ProfileAvatar profile={user} className='w-8 h-8' />
+                    <ProfileAvatar profile={user} className="w-8 h-8" />
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56 mr-2 ">
@@ -53,7 +53,7 @@ export function Profile() {
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>
                     <DropdownMenuItem asChild>
-                        <Link href={`/profile/1`}>
+                        <Link href={`/profile/${user?.id}`}>
                             <User className="mr-2 h-4 w-4" />
                             <span>Профиль</span>
                         </Link>
