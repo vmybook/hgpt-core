@@ -20,7 +20,7 @@ export function Layout({
 }) {
     return (
         <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md">
-            <div className="container flex h-14 items-center">
+            <div className="flex px-6 h-14 items-center">
                 <div className="md:hidden mr-2">
                     <Sheet>
                         <SheetTrigger asChild>
@@ -38,9 +38,11 @@ export function Layout({
                 </div>
 
                 <div className="mr-4 hidden md:flex">{logo}</div>
-                <div className="items-center flex-1 flex">
-                    <div className="hidden md:flex">{nav}</div>
-                    <div className="flex flex-1 items-center justify-end space-x-3 ">
+                
+                <div className="hidden md:flex items-center flex-1 justify-center">{nav}</div>
+
+                <div className="items-center flex">
+                    <div className="flex items-center justify-end space-x-3 ">
                         {actions}
                         {profile}
                     </div>
