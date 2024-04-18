@@ -1,4 +1,4 @@
-import { AppHeader } from '@/widgets/app-header/app-header';
+import { AppHeader } from '@/app/_widgets/app-header/app-header';
 
 export default async function Layout({
     children,
