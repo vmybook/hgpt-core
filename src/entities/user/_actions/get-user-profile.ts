@@ -3,7 +3,7 @@
 import { z } from 'zod';
 import { getAppSessionStrictServer } from '../session.server';
 import { profileSchema } from '../_domain/schema';
-import { getUserUseCase } from '../_use-cases/get-user';
+import { getUserService } from '../_use-cases/get-user';
 
 
 const propsSchema = z.object({
@@ -20,7 +20,7 @@ export const getUserProfileAction = async (
     const { userId } = propsSchema.parse(props);
     const session = await getAppSessionStrictServer();
 
-    const user = await getUserUseCase.exec({
+    const user = await getUserService.exec({
         session,
         userId,
     });
