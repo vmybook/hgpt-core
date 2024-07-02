@@ -3,7 +3,7 @@
 import { z } from 'zod';
 import { getAppSessionStrictServer } from '../session.server';
 import { profileSchema } from '../_domain/schema';
-import { getUserService } from '../_use-cases/get-user';
+import { getUserService } from '../_services/get-user';
 
 
 const propsSchema = z.object({

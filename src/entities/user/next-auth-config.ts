@@ -5,7 +5,7 @@ import { PrismaAdapter } from '@auth/prisma-adapter';
 import { dbClient } from '@/shared/lib/db';
 import { compact } from 'lodash-es';
 import { privateConfig } from '@/shared/config/private';
-import { createUserService } from './_use-cases/create-user';
+import { createUserService } from './_services/create-user';
 
 const prismaAdapter = PrismaAdapter(dbClient);
 
